@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="RestInvoiceEO"
+   DBObjectType="table"
+   DBObjectName="XXTF_REST_INVOICES"
+   AliasName="RestInvoiceEO"
+   BindingStyle="OracleName"
+   UseGlueCode="false"
+   RowClass="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoiceEOImpl"
+   DefClass="oracle.apps.fnd.framework.server.OAEntityDefImpl"
+   CollClass="oracle.apps.fnd.framework.server.OAEntityCache" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="10.1.3.43.6" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+      <Attr Name="_codeGenFlag2" Value="Init|Access" />
+   </DesignTime>
+   <Attribute
+      Name="InvoiceId"
+      IsNotNull="true"
+      ColumnName="INVOICE_ID"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="XXTF_REST_INVOICES"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="InvoiceNum"
+      IsNotNull="true"
+      Precision="50"
+      ColumnName="INVOICE_NUM"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="XXTF_REST_INVOICES" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="50" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="InvoiceDate"
+      IsNotNull="true"
+      ColumnName="INVOICE_DATE"
+      Type="oracle.jbo.domain.Date"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="XXTF_REST_INVOICES" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CustomerNum"
+      IsNotNull="true"
+      Precision="50"
+      ColumnName="CUSTOMER_NUM"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="XXTF_REST_INVOICES" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="50" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CreatedBy"
+      IsNotNull="true"
+      Precision="15"
+      Scale="0"
+      ColumnName="CREATED_BY"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="XXTF_REST_INVOICES" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CreationDate"
+      IsNotNull="true"
+      ColumnName="CREATION_DATE"
+      Type="oracle.jbo.domain.Date"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="XXTF_REST_INVOICES" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="LastUpdatedBy"
+      IsNotNull="true"
+      Precision="15"
+      Scale="0"
+      ColumnName="LAST_UPDATED_BY"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="XXTF_REST_INVOICES" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="LastUpdateDate"
+      IsNotNull="true"
+      ColumnName="LAST_UPDATE_DATE"
+      Type="oracle.jbo.domain.Date"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="XXTF_REST_INVOICES" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="LastUpdateLogin"
+      IsNotNull="true"
+      Precision="15"
+      Scale="0"
+      ColumnName="LAST_UPDATE_LOGIN"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="XXTF_REST_INVOICES" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <AccessorAttribute
+      Name="RestInvoiceLineEO"
+      Association="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoiceToLineAO"
+      AssociationEnd="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoiceToLineAO.RestInvoiceLineEO"
+      AssociationOtherEnd="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoiceToLineAO.RestInvoiceEO"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <Key
+      Name="RestinvoiceeoPrimaryKey" >
+      <AttrArray Name="Attributes">
+         <Item Value="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoiceEO.InvoiceId" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_isPrimary" Value="true" />
+         <Attr Name="_DBObjectName" Value="RESTINVOICEEO_PRIMARY_KEY" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC00291483" >
+      <AttrArray Name="Attributes">
+         <Item Value="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoiceEO.InvoiceId" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;INVOICE_ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C00291483" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC00291484" >
+      <AttrArray Name="Attributes">
+         <Item Value="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoiceEO.InvoiceNum" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;INVOICE_NUM&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C00291484" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC00291485" >
+      <AttrArray Name="Attributes">
+         <Item Value="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoiceEO.InvoiceDate" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;INVOICE_DATE&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C00291485" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC00291486" >
+      <AttrArray Name="Attributes">
+         <Item Value="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoiceEO.CustomerNum" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;CUSTOMER_NUM&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C00291486" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC00291487" >
+      <AttrArray Name="Attributes">
+         <Item Value="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoiceEO.CreatedBy" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;CREATED_BY&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C00291487" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC00291488" >
+      <AttrArray Name="Attributes">
+         <Item Value="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoiceEO.CreationDate" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;CREATION_DATE&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C00291488" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC00291489" >
+      <AttrArray Name="Attributes">
+         <Item Value="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoiceEO.LastUpdatedBy" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;LAST_UPDATED_BY&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C00291489" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC00291490" >
+      <AttrArray Name="Attributes">
+         <Item Value="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoiceEO.LastUpdateDate" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;LAST_UPDATE_DATE&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C00291490" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC00291491" >
+      <AttrArray Name="Attributes">
+         <Item Value="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoiceEO.LastUpdateLogin" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;LAST_UPDATE_LOGIN&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C00291491" />
+      </DesignTime>
+   </Key>
+</Entity>

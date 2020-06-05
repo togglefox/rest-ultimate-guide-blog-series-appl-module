@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="RestInvoicesVO"
+   SelectList="RestInvoiceEO.INVOICE_ID, 
+       RestInvoiceEO.INVOICE_NUM, 
+       RestInvoiceEO.INVOICE_DATE, 
+       RestInvoiceEO.CUSTOMER_NUM, 
+       RestInvoiceEO.CREATED_BY, 
+       RestInvoiceEO.CREATION_DATE, 
+       RestInvoiceEO.LAST_UPDATED_BY, 
+       RestInvoiceEO.LAST_UPDATE_DATE, 
+       RestInvoiceEO.LAST_UPDATE_LOGIN"
+   FromList="XXTF_REST_INVOICES RestInvoiceEO"
+   BindingStyle="OracleName"
+   CustomQuery="false"
+   RowClass="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoicesVORowImpl"
+   ComponentClass="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoicesVOImpl"
+   UseGlueCode="false" >
+   <Properties>
+      <Property Name ="VO_ATTR.RestInvoiceLinesVO.VO_DATATYPE" Value ="Number" />
+      <Property Name ="VO_ATTR.RestInvoiceLinesVO.VO_QUALIFIED_NAME" Value ="Number" />
+   </Properties>
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="10.1.3.43.6" />
+      <Attr Name="_codeGenFlag2" Value="Access|Coll|VarAccess" />
+   </DesignTime>
+   <EntityUsage
+      Name="RestInvoiceEO"
+      Entity="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoiceEO" >
+      <DesignTime>
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="InvoiceId"
+      IsNotNull="true"
+      EntityAttrName="InvoiceId"
+      EntityUsage="RestInvoiceEO"
+      AliasName="INVOICE_ID" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="InvoiceNum"
+      IsNotNull="true"
+      EntityAttrName="InvoiceNum"
+      EntityUsage="RestInvoiceEO"
+      AliasName="INVOICE_NUM" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="InvoiceDate"
+      IsNotNull="true"
+      EntityAttrName="InvoiceDate"
+      EntityUsage="RestInvoiceEO"
+      AliasName="INVOICE_DATE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CustomerNum"
+      IsNotNull="true"
+      EntityAttrName="CustomerNum"
+      EntityUsage="RestInvoiceEO"
+      AliasName="CUSTOMER_NUM" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CreatedBy"
+      IsNotNull="true"
+      EntityAttrName="CreatedBy"
+      EntityUsage="RestInvoiceEO"
+      AliasName="CREATED_BY" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CreationDate"
+      IsNotNull="true"
+      EntityAttrName="CreationDate"
+      EntityUsage="RestInvoiceEO"
+      AliasName="CREATION_DATE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="LastUpdatedBy"
+      IsNotNull="true"
+      EntityAttrName="LastUpdatedBy"
+      EntityUsage="RestInvoiceEO"
+      AliasName="LAST_UPDATED_BY" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="LastUpdateDate"
+      IsNotNull="true"
+      EntityAttrName="LastUpdateDate"
+      EntityUsage="RestInvoiceEO"
+      AliasName="LAST_UPDATE_DATE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="LastUpdateLogin"
+      IsNotNull="true"
+      EntityAttrName="LastUpdateLogin"
+      EntityUsage="RestInvoiceEO"
+      AliasName="LAST_UPDATE_LOGIN" >
+   </ViewAttribute>
+   <ViewLinkAccessor
+      Name="RestInvoiceLinesVO"
+      ViewLink="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoiceToLinesVL"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </ViewLinkAccessor>
+</ViewObject>

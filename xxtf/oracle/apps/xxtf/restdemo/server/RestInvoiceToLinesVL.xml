@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+
+<ViewLink
+   Name="RestInvoiceToLinesVL" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="10.1.3.43.6" />
+   </DesignTime>
+   <ViewLinkDefEnd
+      Name="RestInvoicesVO"
+      Cardinality="1"
+      Owner="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoicesVO"
+      Source="true" >
+      <AttrArray Name="Attributes">
+         <Item Value="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoicesVO.InvoiceId" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_finderName" Value="RestInvoicesVO" />
+         <Attr Name="_isUpdateable" Value="true" />
+      </DesignTime>
+   </ViewLinkDefEnd>
+   <ViewLinkDefEnd
+      Name="RestInvoiceLinesVO"
+      Cardinality="-1"
+      Owner="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoiceLinesVO" >
+      <AttrArray Name="Attributes">
+         <Item Value="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoiceLinesVO.InvoiceId" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_finderName" Value="RestInvoiceLinesVO" />
+         <Attr Name="_isUpdateable" Value="true" />
+      </DesignTime>
+   </ViewLinkDefEnd>
+</ViewLink>

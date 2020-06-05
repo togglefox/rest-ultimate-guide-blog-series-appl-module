@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage
+   Name="server"
+   SeparateXMLFiles="true"
+   PackageName="xxtf.oracle.apps.xxtf.restdemo.server" >
+   <DesignTime>
+      <Attr Name="_ejbPackage" Value="false" />
+      <Attr Name="_version" Value="10.1.3.43.6" />
+   </DesignTime>
+   <Containee
+      Name="RestDemoAM"
+      FullName="xxtf.oracle.apps.xxtf.restdemo.server.RestDemoAM"
+      ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="RestInvoiceEO"
+      FullName="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoiceEO"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="RestInvoiceLineEO"
+      FullName="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoiceLineEO"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="RestInvoiceLinesVO"
+      FullName="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoiceLinesVO"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="RestInvoiceQueryVO"
+      FullName="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoiceQueryVO"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="RestInvoicesVO"
+      FullName="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoicesVO"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="RestInvoiceToLineAO"
+      FullName="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoiceToLineAO"
+      ObjectType="Association" >
+   </Containee>
+   <Containee
+      Name="RestInvoiceToLinesVL"
+      FullName="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoiceToLinesVL"
+      ObjectType="ViewLink" >
+   </Containee>
+</JboPackage>

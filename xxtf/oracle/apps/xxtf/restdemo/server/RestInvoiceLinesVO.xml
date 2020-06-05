@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="RestInvoiceLinesVO"
+   SelectList="RestInvoiceLineEO.INVOICE_LINE_ID, 
+       RestInvoiceLineEO.INVOICE_ID, 
+       RestInvoiceLineEO.LINE_NUM, 
+       RestInvoiceLineEO.DESCRIPTION, 
+       RestInvoiceLineEO.QUANTITY, 
+       RestInvoiceLineEO.PRICE, 
+       RestInvoiceLineEO.LINE_AMOUNT, 
+       RestInvoiceLineEO.CREATED_BY, 
+       RestInvoiceLineEO.CREATION_DATE, 
+       RestInvoiceLineEO.LAST_UPDATED_BY, 
+       RestInvoiceLineEO.LAST_UPDATE_DATE, 
+       RestInvoiceLineEO.LAST_UPDATE_LOGIN"
+   FromList="XXTF_REST_INVOICE_LINES RestInvoiceLineEO"
+   BindingStyle="OracleName"
+   CustomQuery="false"
+   RowClass="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoiceLinesVORowImpl"
+   ComponentClass="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoiceLinesVOImpl"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="10.1.3.43.6" />
+      <Attr Name="_codeGenFlag2" Value="Access|Coll|VarAccess" />
+   </DesignTime>
+   <EntityUsage
+      Name="RestInvoiceLineEO"
+      Entity="xxtf.oracle.apps.xxtf.restdemo.server.RestInvoiceLineEO" >
+      <DesignTime>
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="InvoiceLineId"
+      IsNotNull="true"
+      EntityAttrName="InvoiceLineId"
+      EntityUsage="RestInvoiceLineEO"
+      AliasName="INVOICE_LINE_ID" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="InvoiceId"
+      IsNotNull="true"
+      EntityAttrName="InvoiceId"
+      EntityUsage="RestInvoiceLineEO"
+      AliasName="INVOICE_ID" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="LineNum"
+      IsNotNull="true"
+      EntityAttrName="LineNum"
+      EntityUsage="RestInvoiceLineEO"
+      AliasName="LINE_NUM" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Description"
+      IsNotNull="true"
+      EntityAttrName="Description"
+      EntityUsage="RestInvoiceLineEO"
+      AliasName="DESCRIPTION" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Quantity"
+      IsNotNull="true"
+      EntityAttrName="Quantity"
+      EntityUsage="RestInvoiceLineEO"
+      AliasName="QUANTITY" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Price"
+      IsNotNull="true"
+      EntityAttrName="Price"
+      EntityUsage="RestInvoiceLineEO"
+      AliasName="PRICE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="LineAmount"
+      IsNotNull="true"
+      EntityAttrName="LineAmount"
+      EntityUsage="RestInvoiceLineEO"
+      AliasName="LINE_AMOUNT" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CreatedBy"
+      IsNotNull="true"
+      EntityAttrName="CreatedBy"
+      EntityUsage="RestInvoiceLineEO"
+      AliasName="CREATED_BY" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CreationDate"
+      IsNotNull="true"
+      EntityAttrName="CreationDate"
+      EntityUsage="RestInvoiceLineEO"
+      AliasName="CREATION_DATE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="LastUpdatedBy"
+      IsNotNull="true"
+      EntityAttrName="LastUpdatedBy"
+      EntityUsage="RestInvoiceLineEO"
+      AliasName="LAST_UPDATED_BY" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="LastUpdateDate"
+      IsNotNull="true"
+      EntityAttrName="LastUpdateDate"
+      EntityUsage="RestInvoiceLineEO"
+      AliasName="LAST_UPDATE_DATE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="LastUpdateLogin"
+      IsNotNull="true"
+      EntityAttrName="LastUpdateLogin"
+      EntityUsage="RestInvoiceLineEO"
+      AliasName="LAST_UPDATE_LOGIN" >
+   </ViewAttribute>
+</ViewObject>
