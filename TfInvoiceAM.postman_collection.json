@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "4fa2ec41-249d-463b-b976-ebed4849335c",
+		"name": "TfInvoiceAM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get invoice",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://vis1227.togglefox.com:8000/webservices/rest/TfInvoiceAM/getInvoice/10",
+					"protocol": "http",
+					"host": [
+						"vis1227",
+						"togglefox",
+						"com"
+					],
+					"port": "8000",
+					"path": [
+						"webservices",
+						"rest",
+						"TfInvoiceAM",
+						"getInvoice",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get invoices",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/xml"
+					}
+				],
+				"url": {
+					"raw": "http://vis1227.togglefox.com:8000/webservices/rest/TfInvoiceAM/getInvoices/?invoiceNum=&invoiceDateFrom=&invoiceDateTo&customerNum&limit=&offset=",
+					"protocol": "http",
+					"host": [
+						"vis1227",
+						"togglefox",
+						"com"
+					],
+					"port": "8000",
+					"path": [
+						"webservices",
+						"rest",
+						"TfInvoiceAM",
+						"getInvoices",
+						""
+					],
+					"query": [
+						{
+							"key": "invoiceNum",
+							"value": ""
+						},
+						{
+							"key": "invoiceDateFrom",
+							"value": ""
+						},
+						{
+							"key": "invoiceDateTo",
+							"value": null
+						},
+						{
+							"key": "customerNum",
+							"value": null
+						},
+						{
+							"key": "limit",
+							"value": ""
+						},
+						{
+							"key": "offset",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create invoice",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<ns:POST_Input xmlns:ns=\"http://xmlns.oracle.com/apps/fnd/rest/TfInvoiceAM/createInvoice/\">\n    <ns:RESTHeader>\n        <ns:Responsibility>FND_REP_APP</ns:Responsibility>\n        <ns:RespApplication>FND</ns:RespApplication>\n        <ns:SecurityGroup>STANDARD</ns:SecurityGroup>\n        <ns:NLSLanguage>AMERICAN</ns:NLSLanguage>\n        <ns:Org_Id>204</ns:Org_Id>\n    </ns:RESTHeader>\n    <ns:InputParameters>\n        <ns:invoice>\n            <ns:invoiceNum>12345</ns:invoiceNum>\n            <ns:invoiceDate>2020-01-01</ns:invoiceDate>\n            <ns:customerNum>777</ns:customerNum>\n            <ns:lines>\n                <ns:lineNum>1</ns:lineNum>\n                <ns:description>Line 1 desc</ns:description>\n                <ns:price>10</ns:price>\n                <ns:quantity>2</ns:quantity>\n                <ns:lineAmount>20</ns:lineAmount>\n            </ns:lines>\n            <ns:lines>\n                <ns:lineNum>2</ns:lineNum>\n                <ns:description>Line 2 description</ns:description>\n                <ns:price>20</ns:price>\n                <ns:quantity>2</ns:quantity>\n                <ns:lineAmount>40</ns:lineAmount>\n            </ns:lines>\n        </ns:invoice>\n    </ns:InputParameters>\n</ns:POST_Input>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://vis1227.togglefox.com:8000/webservices/rest/TfInvoiceAM/createInvoice/",
+					"protocol": "http",
+					"host": [
+						"vis1227",
+						"togglefox",
+						"com"
+					],
+					"port": "8000",
+					"path": [
+						"webservices",
+						"rest",
+						"TfInvoiceAM",
+						"createInvoice",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update invoice",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<ns:POST_Input xmlns:ns=\"http://xmlns.oracle.com/apps/fnd/rest/TfInvoiceAM/updateInvoice/\">\n    <ns:RESTHeader>\n        <ns:Responsibility>FND_REP_APP</ns:Responsibility>\n        <ns:RespApplication>FND</ns:RespApplication>\n        <ns:SecurityGroup>STANDARD</ns:SecurityGroup>\n        <ns:NLSLanguage>AMERICAN</ns:NLSLanguage>\n        <ns:Org_Id>202</ns:Org_Id>\n    </ns:RESTHeader>\n    <ns:InputParameters>\n        <ns:invoice>\n            <ns:invoiceId>8577</ns:invoiceId>\n            <ns:invoiceNum>8577</ns:invoiceNum>\n            <ns:invoiceDate>2020-01-01</ns:invoiceDate>\n            <ns:customerNum>777</ns:customerNum>\n            <ns:lines>\n                <ns:lineNum>1</ns:lineNum>\n                <ns:description>eeeeee</ns:description>\n                <ns:price>10</ns:price>\n                <ns:quantity>2</ns:quantity>\n                <ns:lineAmount>20</ns:lineAmount>\n            </ns:lines>\n            <ns:lines>\n                <ns:lineNum>2</ns:lineNum>\n                <ns:description>fffe</ns:description>\n                <ns:price>20</ns:price>\n                <ns:quantity>2</ns:quantity>\n                <ns:lineAmount>40</ns:lineAmount>\n            </ns:lines>\n        </ns:invoice>\n    </ns:InputParameters>\n</ns:POST_Input>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://vis1227.togglefox.com:8000/webservices/rest/TfInvoiceAM/updateInvoice/",
+					"protocol": "http",
+					"host": [
+						"vis1227",
+						"togglefox",
+						"com"
+					],
+					"port": "8000",
+					"path": [
+						"webservices",
+						"rest",
+						"TfInvoiceAM",
+						"updateInvoice",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete invoice",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://vis1227.togglefox.com:8000/webservices/rest/TfInvoiceAM/deleteInvoice/1",
+					"protocol": "http",
+					"host": [
+						"vis1227",
+						"togglefox",
+						"com"
+					],
+					"port": "8000",
+					"path": [
+						"webservices",
+						"rest",
+						"TfInvoiceAM",
+						"deleteInvoice",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "changepassword",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "michael",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "e4e2b5b4-8678-4021-bd99-9a678042c07d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "38655f75-a1a5-4338-a0ee-b574a46206b6",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
